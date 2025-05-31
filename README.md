@@ -1,9 +1,10 @@
-📘 [한국어](./README.md) | 🌍 [English](./README_en.md) | 🇯🇵 [日本語](./README_ja.md)
 <div align="center">
 
 <img src="https://raw.githubusercontent.com/Klypse/PentaGo/main/assets/pentago-logo.png" width="180" alt="PentaGo Logo" />
 
 <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=30&duration=3000&pause=1000&color=00FFFF&center=true&vCenter=true&width=800&lines=PentaGo+-+Async+Papago+Unofficial+API" alt="Orbitron Heading" />
+
+📘 [한국어](./README.md) | 🌍 [English](./README_en.md) | 🇯🇵 [日本語](./README_ja.md)
 
 </div>
 
@@ -14,8 +15,7 @@
 **PentaGo**는 네이버 파파고 웹 인터페이스를 비동기로 사용하는 **비공식 Python 번역 라이브러리**입니다.  
 공식 API 키 없이도 간편하게 고성능 번역을 구현할 수 있습니다.
 
-> ✅ **2025년에도 정상 작동 중입니다.**  
-> 최신 파파고 웹 구조에 맞춰 작동하도록 유지되고 있습니다.
+> ✅ **2025년에도 정상 작동 중입니다.**
 
 ---
 
@@ -36,8 +36,6 @@ git clone https://github.com/Klypse/PentaGo.git
 cd PentaGo
 ```
 
-> pip 패키지로는 배포되어 있지 않습니다. 직접 클론하여 사용해주세요.
-
 ---
 
 ## 🧪 사용 예시
@@ -57,32 +55,21 @@ if __name__ == "__main__":
     asyncio.run(main())
 ```
 
-### 결과 예시:
-```json
-{
-  "source": "ko",
-  "target": "ja",
-  "text": "2025년 최고의 파파고 비공식 API는 PentaGo입니다.",
-  "translatedText": "2025年最高のパパゴ非公式APIはPentaGoです。",
-  "sound": "nisen'nijūgonen saikōno papago hikōshiki ēpīai wa pentago desu",
-  "srcSound": "icheonosibo nyeon choego ui papago bigongsig api neun pentago imnida"
-}
-```
-
 ---
 
 ## 🌐 지원 언어
 
-| 코드 | 언어       | 코드 | 언어       |
-|------|------------|------|------------|
-| ko   | 한국어     | en   | 영어       |
-| ja   | 일본어     | zh-CN| 중국어 (간체) |
-| zh-TW| 중국어 (번체) | es | 스페인어   |
-| fr   | 프랑스어   | vi   | 베트남어   |
-| th   | 태국어     | id   | 인도네시아어 |
-| de   | 독일어     | ru   | 러시아어   |
-| pt   | 포르투갈어 | it   | 이탈리아어 |
-| hi   | 힌디어     | auto | 자동 감지  |
+| 코드 | 언어       | 코드 | 언어         |
+|------|------------|------|--------------|
+| `ko` | 한국어     | `en` | 영어         |
+| `ja` | 일본어     | `zh-CN` | 중국어(간체) |
+| `zh-TW` | 중국어(번체) | `es` | 스페인어   |
+| `fr` | 프랑스어   | `vi` | 베트남어     |
+| `th` | 태국어     | `id` | 인도네시아어 |
+| `de` | 독일어     | `ru` | 러시아어     |
+| `pt` | 포르투갈어 | `it` | 이탈리아어   |
+| `hi` | 힌디어     | `ar` | 아랍어       |
+| `auto` | 자동 감지 |      |              |
 
 ---
 
@@ -94,7 +81,4 @@ if __name__ == "__main__":
 
 ## 🤝 기여
 
-- Issue 또는 PR은 언제든지 환영합니다.
-- 기능 추가, 리팩토링, 버그 수정 등 자유롭게 참여해주세요.
-
----
+Issue 또는 PR은 언제든지 환영합니다.
