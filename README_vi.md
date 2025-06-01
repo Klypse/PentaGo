@@ -2,9 +2,9 @@
 
 <img src="https://raw.githubusercontent.com/Klypse/PentaGo/main/assets/pentago-logo.png" width="180" alt="Biểu tượng PentaGo" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=30&duration=3000&pause=1000&color=00FFFF&center=true&vCenter=true&width=800&lines=PentaGo+-+API+Papago+không+chính+thức+với+Async" alt="Dòng giới thiệu PentaGo" />
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=30&duration=3000&pause=1000&color=00FFFF&center=true&vCenter=true&width=800&lines=PentaGo+-+API+Papago+kh%C3%B4ng+ch%C3%ADnh+th%E1%BB%A9c+v%E1%BB%9Bi+Async" alt="Giới thiệu PentaGo" />
 
-📘 [Tiếng Hàn](./README.md) | 🌍 [Tiếng Anh](./README_en.md) | 🇯🇵 [Tiếng Nhật](./README_ja.md) | 🇫🇷 [Tiếng Pháp](./README_fr.md) | 🇩🇪 [Tiếng Đức](./README_de.md) | 🇻🇳 [Tiếng Việt](./README_vi.md) | 🇸🇦 [Tiếng Ả Rập](./README_ar.md)
+📘 [한국어](./README.md) | 🌍 [English](./README_en.md) | 🇯🇵 [日本語](./README_ja.md) | 🇫🇷 [Français](./README_fr.md) | 🇩🇪 [Deutsch](./README_de.md) | 🇻🇳 [Tiếng Việt](./README_vi.md) | 🇸🇦 [العربية](./README_ar.md)
 </div>
 
 ---
