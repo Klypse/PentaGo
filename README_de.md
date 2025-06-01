@@ -4,8 +4,7 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=30&duration=3000&pause=1000&color=00FFFF&center=true&vCenter=true&width=800&lines=PentaGo+-+Asynchrone+Papago+Inoffizielle+API" alt="PentaGo Ticker" />
 
-📘 [Koreanisch](./README.md) | 🌍 [Englisch](./README_en.md) | 🇯🇵 [Japanisch](./README_ja.md) | 🇫🇷 [Französisch](./README_fr.md) | 🇩🇪 [Deutsch](./README_de.md) | 🇻🇳 [Vietnamesisch](./README_vi.md) | 🇸🇦 [Arabisch](./README_ar.md)
-
+📘 [한국어](./README.md) | 🌍 [English](./README_en.md) | 🇯🇵 [日本語](./README_ja.md) | 🇫🇷 [Français](./README_fr.md) | 🇩🇪 [Deutsch](./README_de.md) | 🇻🇳 [Tiếng Việt](./README_vi.md) | 🇸🇦 [العربية](./README_ar.md)
 </div>
 
 ---
