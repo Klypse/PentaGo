@@ -2,9 +2,9 @@
 
 <img src="https://raw.githubusercontent.com/Klypse/PentaGo/main/assets/pentago-logo.png" width="180" alt="شعار PentaGo" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=30&duration=3000&pause=1000&color=00FFFF&center=true&vCenter=true&width=800&lines=PentaGo+-+واجهة+برمجة+تطبيقات+Papago+غير+رسمية+باستخدام+Async" alt="عنوان PentaGo" />
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=30&duration=3000&pause=1000&color=00FFFF&center=true&vCenter=true&width=800&lines=PentaGo+-+%D9%88%D8%A7%D8%AC%D9%87%D8%A9+%D8%A8%D8%B1%D9%85%D8%AC%D8%A9+%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA+Papago+%D8%BA%D9%8A%D8%B1+%D8%B1%D8%B3%D9%85%D9%8A%D8%A9+%D8%A8%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85+Async" alt="PentaGo - واجهة Papago غير رسمية" />
 
-📘 [الكورية](./README.md) | 🌍 [الإنجليزية](./README_en.md) | 🇯🇵 [اليابانية](./README_ja.md) | 🇫🇷 [الفرنسية](./README_fr.md) | 🇩🇪 [الألمانية](./README_de.md) | 🇻🇳 [الفيتنامية](./README_vi.md) | 🇸🇦 [العربية](./README_ar.md)
+📘 [한국어](./README.md) | 🌍 [English](./README_en.md) | 🇯🇵 [日本語](./README_ja.md) | 🇫🇷 [Français](./README_fr.md) | 🇩🇪 [Deutsch](./README_de.md) | 🇻🇳 [Tiếng Việt](./README_vi.md) | 🇸🇦 [العربية](./README_ar.md)
 
 </div>
 
