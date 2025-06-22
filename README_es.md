@@ -77,7 +77,7 @@ if __name__ == "__main__":
 
 ## 📄 Licencia
 
-Este proyecto está licenciado bajo la [licencia GPL-3.0](LICENSE).
+Este proyecto está licenciado bajo la [licencia MIT](LICENSE).
 
 ---
 
