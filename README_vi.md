@@ -73,7 +73,7 @@ if __name__ == "__main__":
 
 ## 📄 Giấy phép
 
-Dự án này sử dụng giấy phép [GPL-3.0](LICENSE).
+Dự án này sử dụng giấy phép [MIT](LICENSE).
 
 ---
 
