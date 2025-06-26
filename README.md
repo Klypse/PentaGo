@@ -12,33 +12,33 @@
 
 # 🧠 PentaGo
 
-**PentaGo**는 네이버 파파고 웹 인터페이스를 비동기로 사용하는 **비공식 Python 번역 라이브러리**입니다.  
-공식 API 키 없이도 간편하게 고성능 번역을 구현할 수 있습니다.
+**PentaGo** is an unofficial asynchronous Python translation library utilizing Naver Papago's web interface. It provides reliable, high-performance translations without requiring an official API key.
 
-> ✅ **2025년에도 정상 작동 중입니다.**
-
----
-
-## 🚀 특징
-
-- ✅ **비공식 파파고 API 래퍼**
-- ⚡ **비동기 처리 지원 (`async/await`)**
-- 🌍 **다국어 지원 (16개 언어)**
-- 💬 **발음 및 사전 결과 포함**
-- 🙇 **높임말(honorific) 옵션**
+> ✅ **Confirmed working as of 2025**
 
 ---
 
-## 📦 설치 방법
+## 🚀 Features
+
+* ✅ **Unofficial Papago API wrapper**
+* ⚡ **Async support (`async/await`)**
+* 🌍 **Supports 16 languages**
+* 💬 **Includes pronunciation & dictionary details**
+* 🙇 **Honorific language support**
+
+---
+
+## 📦 Installation
+
+[![PyPI - Version](https://img.shields.io/pypi/v/pentago?color=red\&label=pip\&style=flat-square)](https://pypi.org/project/pentago/)
 
 ```bash
-git clone https://github.com/Klypse/PentaGo.git
-cd PentaGo
+pip install pentago
 ```
 
 ---
 
-## 🧪 사용 예시
+## 🧪 Usage Example
 
 ```python
 from pentago import Pentago
@@ -48,7 +48,7 @@ import asyncio
 
 async def main():
     pentago = Pentago(AUTO, JAPANESE)
-    result = await pentago.translate("2025년 최고의 파파고 비공식 API는 PentaGo입니다.", honorific=True)
+    result = await pentago.translate("The best unofficial Papago API in 2025 is PentaGo.", honorific=True)
     print(result)
 
 if __name__ == "__main__":
@@ -57,28 +57,28 @@ if __name__ == "__main__":
 
 ---
 
-## 🌐 지원 언어
+## 🌐 Supported Languages
 
-| 코드 | 언어       | 코드 | 언어         |
-|------|------------|------|--------------|
-| `ko` | 한국어     | `en` | 영어         |
-| `ja` | 일본어     | `zh-CN` | 중국어(간체) |
-| `zh-TW` | 중국어(번체) | `es` | 스페인어   |
-| `fr` | 프랑스어   | `vi` | 베트남어     |
-| `th` | 태국어     | `id` | 인도네시아어 |
-| `de` | 독일어     | `ru` | 러시아어     |
-| `pt` | 포르투갈어 | `it` | 이탈리아어   |
-| `hi` | 힌디어     | `ar` | 아랍어       |
-| `auto` | 자동 감지 |      |              |
-
----
-
-## 📄 라이선스
-
-이 프로젝트는 [MIT 라이선스](LICENSE)를 따릅니다.
+| Code    | Language              | Code    | Language             |
+| ------- | --------------------- | ------- | -------------------- |
+| `ko`    | Korean                | `en`    | English              |
+| `ja`    | Japanese              | `zh-CN` | Chinese (Simplified) |
+| `zh-TW` | Chinese (Traditional) | `es`    | Spanish              |
+| `fr`    | French                | `vi`    | Vietnamese           |
+| `th`    | Thai                  | `id`    | Indonesian           |
+| `de`    | German                | `ru`    | Russian              |
+| `pt`    | Portuguese            | `it`    | Italian              |
+| `hi`    | Hindi                 | `ar`    | Arabic               |
+| `auto`  | Automatic Detection   |         |                      |
 
 ---
 
-## 🤝 기여
+## 📄 License
 
-Issue 또는 PR은 언제든지 환영합니다.
+Licensed under the [MIT License](LICENSE).
+
+---
+
+## 🤝 Contributing
+
+Issues and pull requests are welcome!
