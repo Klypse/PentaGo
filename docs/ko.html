@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PentaGo – 공식 API 없이 파파고를 사용하는 번역기 자동화 라이브러리" />
+  <meta name="keywords" content="Papago, 비공식 API, 파이썬 번역, 파파고, 파파고 api, reverse engineering, pentago">
+  <meta name="author" content="Klypse">
+  <title>PentaGo – 파이썬 비공식 파파고 API</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.7;
+      max-width: 840px;
+      margin: auto;
+      padding: 2rem;
+      color: #222;
+      background: #fdfdfd;
+    }
+    h1, h2, h3 {
+      color: #003e9f;
+      margin-top: 2.5rem;
+    }
+    code, pre {
+      background: #f3f3f3;
+      padding: 0.4em 0.6em;
+      border-radius: 6px;
+      font-size: 0.95em;
+    }
+    pre {
+      overflow-x: auto;
+      padding: 1em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+      padding: 0.6em;
+      text-align: left;
+    }
+    .badge img {
+      height: 20px;
+      margin: 0 6px;
+      vertical-align: middle;
+    }
+    .center {
+      text-align: center;
+    }
+    a {
+      color: #003e9f;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <img src="./logo.png" width="140" alt="PentaGo 로고" />
+    <h1>PentaGo – 자동화된 파파고 비공식 번역기 API</h1>
+    <div class="badge">
+      <a href="https://pypi.org/project/pentago/"><img src="https://img.shields.io/pypi/v/pentago?color=red&label=pypi&style=flat-square" alt="PyPI version" /></a>
+      <img src="https://img.shields.io/badge/Python-3.9%2B-blue.svg?style=flat-square" alt="Python" />
+      <img src="https://img.shields.io/github/license/Klypse/PentaGo?style=flat-square" alt="License" />
+    </div>
+  </div>
+
+  <p>
+    <strong>PentaGo</strong>는 네이버 파파고 웹 번역기를 분석해서 만든 비공식 파이썬 라이브러리입니다.  
+    별도의 API 키 없이도 번역을 실행할 수 있고, <code>asyncio</code> 기반으로 비동기 처리도 지원합니다.  
+    발음, 존댓말, 자동 언어 감지 같은 실용적인 기능도 포함되어 있습니다.
+  </p>
+
+  <h2>가능한 기능들</h2>
+  <ul>
+    <li>공식 API 없이 Papago 번역 사용</li>
+    <li>비동기 요청으로 빠르게 처리</li>
+    <li>16개 이상의 언어 지원</li>
+    <li>자동 언어 감지</li>
+    <li>발음, 존댓말 처리 가능</li>
+    <li>동적으로 키를 자동 갱신해서 안정성 유지</li>
+  </ul>
+
+  <h2>설치 방법</h2>
+  <pre><code>pip install pentago</code></pre>
+
+  <h2>사용 예시</h2>
+  <pre><code>from pentago import Pentago
+from pentago.lang import *
+
+import asyncio
+
+async def main():
+    pentago = Pentago(AUTO, JAPANESE)
+    result = await pentago.translate("The best unofficial Papago API in 2025 is PentaGo.", honorific=True)
+    print(result)
+
+if __name__ == "__main__":
+    asyncio.run(main())</code></pre>
+
+  <h3>예상 출력</h3>
+  <pre><code>{
+  "source": "ko",
+  "target": "ja",
+  "text": "2025년 최고의 파파고 비공식 API는 PentaGo입니다.",
+  "translatedText": "2025年最高のパパゴ非公式APIはPentaGoです。",
+  "sound": "nisen'nijūgonen saikōno papago hikōshiki ēpīai wa pentagō desu",
+  "srcSound": "icheon isip o nyeon choegoui papago bigongsik eipiaineun pentagoimnida"
+}</code></pre>
+  <p>
+    <strong>sound</strong>: 일본어 발음 (로마자)<br />
+    <strong>srcSound</strong>: 한국어 발음 (로마자)
+  </p>
+
+  <h2>지원 언어</h2>
+  <table>
+    <tr><th>코드</th><th>언어</th><th>코드</th><th>언어</th></tr>
+    <tr><td>ko</td><td>한국어</td><td>en</td><td>영어</td></tr>
+    <tr><td>ja</td><td>일본어</td><td>zh-CN</td><td>중국어(간체)</td></tr>
+    <tr><td>zh-TW</td><td>중국어(번체)</td><td>es</td><td>스페인어</td></tr>
+    <tr><td>fr</td><td>프랑스어</td><td>vi</td><td>베트남어</td></tr>
+    <tr><td>th</td><td>태국어</td><td>id</td><td>인도네시아어</td></tr>
+    <tr><td>de</td><td>독일어</td><td>ru</td><td>러시아어</td></tr>
+    <tr><td>pt</td><td>포르투갈어</td><td>it</td><td>이탈리아어</td></tr>
+    <tr><td>hi</td><td>힌디어</td><td>ar</td><td>아랍어</td></tr>
+    <tr><td>auto</td><td>자동 감지</td><td></td><td></td></tr>
+  </table>
+
+  <h2>활용 예시</h2>
+  <ul>
+    <li>API 없이 번역 기능이 필요한 봇 만들기</li>
+    <li>스크립트나 자동화 도구에 번역 기능 추가</li>
+    <li>다국어 지원이 필요한 프로젝트에 쉽게 연결</li>
+    <li>상용 API를 쓰기 어려운 경우 대안으로 활용</li>
+  </ul>
+
+  <h2>라이선스</h2>
+  <p>MIT 라이선스로 자유롭게 사용, 수정, 배포할 수 있습니다.</p>
+
+  <h2>기여하기</h2>
+  <p>이슈, 제안, PR 모두 환영합니다!</p>
+
+  <p class="center">
+    <a href="https://github.com/Klypse/PentaGo">🔗 GitHub 저장소</a> |
+    <a href="https://pypi.org/project/pentago/">📦 PyPI 패키지</a>
+  </p>
+</body>
+</html>
