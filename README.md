@@ -2,42 +2,52 @@
 
 <img src="https://raw.githubusercontent.com/Klypse/PentaGo/main/assets/pentago-logo.png" width="180" alt="PentaGo Logo" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=30&duration=3000&pause=1000&color=00FFFF&center=true&vCenter=true&width=800&lines=PentaGo+-+Async+Papago+Unofficial+API" alt="Orbitron Heading" />
-
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=30&duration=3000&pause=1000&color=0047AB&center=true&vCenter=true&width=800&lines=PentaGo+-+Async+Papago+Unofficial+API" alt="Orbitron Heading" />
 
 </div>
+<p align="center">
+  <a href="https://pypi.org/project/pentago/">
+    <img src="https://img.shields.io/pypi/v/pentago?color=red&label=pypi&style=flat-square" alt="PyPI version" style="height:28px;" />
+  </a>
+  <img src="https://img.shields.io/badge/Python-3.9%2B-blue.svg?style=flat-square" alt="Python" style="height:28px;" />
+  <img src="https://img.shields.io/github/license/Klypse/PentaGo?style=flat-square" alt="License" style="height:28px;" />
+</p>
 
 ---
 
-# 🧠 PentaGo
+# PentaGo – Unofficial Papago API for Python
 
-**PentaGo** is an unofficial asynchronous Python translation library utilizing Naver Papago's web interface. It provides reliable, high-performance translations without requiring an official API key.
+**PentaGo** is an **unofficial, resilient Python library** that interacts with Naver Papago’s web-based translation service.
+It uses reverse-engineering techniques to automate translations **without relying on an official API key**, and is suitable for both lightweight tasks and scalable pipelines.
 
-> ✅ **Confirmed working as of 2025**
+This library is ideal for developers seeking a programmable interface to Papago for **bot integration, automation pipelines, language tools**, and more.
+
+> ✅ **Actively maintained and confirmed working as of 2025**
 
 ---
 
 ## 🚀 Features
 
-* ✅ **Unofficial Papago API wrapper**
-* ⚡ **Async support (`async/await`)**
-* 🌍 **Supports 16 languages**
-* 💬 **Includes pronunciation & dictionary details**
-* 🙇 **Honorific language support**
+- ✅ Access Papago without official API keys  
+- ⚡ Built with native Python `asyncio` support  
+- 🌍 Supports **16+ languages**, including Korean, English, Japanese, and Chinese  
+- 🔁 Automatic language detection  
+- 💬 Returns pronunciation, honorific forms, and dictionary-level details  
+- 🧱 Stable key regeneration for dynamic request headers (resilient to changes)  
 
 ---
 
 ## 📦 Installation
 
-[![PyPI - Version](https://img.shields.io/pypi/v/pentago?color=red\&label=pip\&style=flat-square)](https://pypi.org/project/pentago/)
+Install via [PyPI](https://pypi.org/project/pentago/):
 
-```bash
+```
 pip install pentago
 ```
 
 ---
 
-## 🧪 Usage Example
+## 🧪 Example Usage
 
 ```python
 from pentago import Pentago
@@ -53,6 +63,22 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 ```
+
+### 🔍 Expected Output
+
+```json
+{
+  "source": "ko",
+  "target": "ja",
+  "text": "2025년 최고의 파파고 비공식 API는 PentaGo입니다.",
+  "translatedText": "2025年最高のパパゴ非公式APIはPentaGoです。",
+  "sound": "nisen'nijūgonen saikōno papago hikōshiki ēpīai wa pentagō desu",
+  "srcSound": "icheon isip o nyeon choegoui papago bigongsik eipiaineun pentagoimnida"
+}
+```
+
+> - `sound`: Romanized Japanese pronunciation  
+> - `srcSound`: Romanized Korean pronunciation
 
 ---
 
@@ -72,6 +98,15 @@ if __name__ == "__main__":
 
 ---
 
+## 📂 Use Cases
+
+- 🧠 Build translation bots without API rate limits  
+- 🤖 Integrate into automation tools or data pipelines  
+- 📚 Enhance personal projects requiring multilingual support  
+- 🔐 Work around commercial API constraints via resilient scraping  
+
+---
+
 ## 📄 License
 
 Licensed under the [MIT License](LICENSE).
@@ -80,4 +115,4 @@ Licensed under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 
-Issues and pull requests are welcome!
+Contributions, issues, and pull requests are always welcome.
