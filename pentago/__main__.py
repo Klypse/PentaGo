@@ -6,7 +6,7 @@ from pentago.hash import Crypto
 from pentago.response import Response
 from pentago.detect import Detect
 from typing import Dict
-import requests
+import httpx
 import json
 
 class Pentago:
@@ -25,19 +25,20 @@ class Pentago:
             'referer': API_BASE,
             'x-apigw-partnerid': API_ID,
         }
-        data = {'authroization' if k == 'authorization' else k: v for k, v in body.items()}
-        res = requests.post(API_TRANS, headers=headers, data={
-            **data,
-            'locale': 'ko',
-            'dict': 'true',
-            'dictDisplay': '30',
-            'honorific': 'true' if honorific else 'false',
-            'instant': 'false',
-            'paging': 'true',
-            'source': self.source,
-            'target': self.target,
-            'text': text
-        })
+        #data = {'authroization' if k == 'authorization' else k: v for k, v in body.items()}
+        async with httpx.AsyncClient() as client:
+            res = await client.post(API_TRANS, headers=headers, data={
+                **body,
+                'locale': 'ko',
+                'dict': 'true',
+                'dictDisplay': '30',
+                'honorific': 'true' if honorific else 'false',
+                'instant': 'false',
+                'paging': 'true',
+                'source': self.source,
+                'target': self.target,
+                'text': text
+            })
         status = Response(res.status_code)
         if status.response:
             content = res.json()
@@ -55,5 +56,4 @@ class Pentago:
                 'translatedText': content['translatedText'],
                 'sound': sound,
                 'srcSound': srcSound
-            }        
-    
+            }

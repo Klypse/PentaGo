@@ -4,7 +4,7 @@ from pentago.api import *
 from pentago.client import *
 from pentago.hash import Crypto
 from pentago.response import Response
-import requests
+import httpx
 
 class Detect:
     def __init__(self, query: str) -> None:
@@ -18,12 +18,11 @@ class Detect:
             'timestamp': crypto.timestamp,
             'referer': API_BASE
         }
-        res = requests.post(API_DECT, headers=headers, data=dict(query=self.query))
+        async with httpx.AsyncClient() as client:
+            res = await client.post(API_DECT, headers=headers, data=dict(query=self.query))
         status = Response(res.status_code)
         if status.response:
             content = res.json()
             lang = content['langCode']
             if lang != 'unk':
                 return lang
-            
-    
