@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pentago"
-version = "0.1.1"
+version = "0.1.2"
 description = "Unofficial Papago API using reverse-engineered web endpoints"
 readme = "README.md"
 requires-python = ">=3.6"
