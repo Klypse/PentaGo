@@ -8,9 +8,9 @@
   <meta name="author" content="Klypse">
   <title>PentaGo – 파이썬 비공식 파파고 API</title>
   <!-- Favicon for browser tab -->
-<link rel="icon" type="image/x-icon" href="./favicon.ico" />
-<link rel="apple-touch-icon" href="./apple-touch-icon.png">
-<link rel="manifest" href="./site.webmanifest">
+  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
   <style>
     body {
       font-family: system-ui, sans-serif;
@@ -108,6 +108,15 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())</code></pre>
+
+  <h3>동기 방식 사용 예시</h3>
+  <pre><code>from pentago import Pentago
+from pentago.lang import *
+
+pentago = Pentago(AUTO, JAPANESE)
+result = pentago.translate_sync("The best unofficial Papago API in 2025 is PentaGo.", honorific=True)
+print(result)</code></pre>
+  <p><strong>⚠️ 주의:</strong> <code>translate_sync()</code>는 이미 실행 중인 asyncio 이벤트 루프 안에서는 사용하지 마세요.</p>
 
   <h3>예상 출력</h3>
   <pre><code>{

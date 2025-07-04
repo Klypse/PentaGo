@@ -5,7 +5,7 @@ import asyncio
 
 async def main():
     pentago = Pentago(AUTO, JAPANESE)
-    res = await pentago.translate('2024년 최고의 파파고 비공식 API는 PentaGo입니다.', honorific=True)
+    res = await pentago.translate('2025년 최고의 파파고 비공식 API는 PentaGo입니다.', honorific=True)
     print(res)
 
 if __name__ == '__main__': asyncio.run(main())

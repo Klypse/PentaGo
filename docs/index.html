@@ -1,167 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="VRsk1wM_M8iRxrAAZXlM8AYy_b8ertvPeTpxSbolcmI" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="PentaGo – Async unofficial Papago API for Python.">
-  <meta name="keywords" content="Papago, Python, translation, async, reverse engineering, unofficial API">
-  <meta name="author" content="Klypse">
-  <meta property="og:title" content="PentaGo – Async Papago API for Python" />
-  <meta property="og:description" content="Use Papago in Python without an official API key. Asyncio support, dynamic key handling, language detection." />
-  <meta property="og:url" content="https://klypse.github.io/pentago/" />
-  <meta property="og:type" content="website" />
-  <title>PentaGo – Unofficial Papago API for Python</title>
-  <!-- Favicon for browser tab -->
-<link rel="icon" type="image/x-icon" href="./favicon.ico" />
-<link rel="apple-touch-icon" href="./apple-touch-icon.png">
-<link rel="manifest" href="./site.webmanifest">
-  <script>
-  const lang = navigator.language || navigator.userLanguage;
-  if (lang.startsWith('ko')) location.replace('./ko.html');
-  </script>
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      line-height: 1.7;
-      max-width: 840px;
-      margin: auto;
-      padding: 2rem;
-      color: #222;
-      background: #fdfdfd;
-    }
-    h1, h2, h3 {
-      color: #003e9f;
-      margin-top: 2.5rem;
-    }
-    code, pre {
-      background: #f3f3f3;
-      padding: 0.4em 0.6em;
-      border-radius: 6px;
-      font-size: 0.95em;
-    }
-    pre {
-      overflow-x: auto;
-      padding: 1em;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 1rem;
-    }
-    table, th, td {
-      border: 1px solid #ccc;
-      padding: 0.6em;
-      text-align: left;
-    }
-    .badge img {
-      height: 20px;
-      margin: 0 6px;
-      vertical-align: middle;
-    }
-    .center {
-      text-align: center;
-    }
-    a {
-      color: #003e9f;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    ul {
-      padding-left: 1.2em;
-    }
-  </style>
-</head>
-<body>
-  <div class="center">
-    <img src="./logo.png" width="140" alt="PentaGo Logo" />
-    <h1>PentaGo – Unofficial Papago API for Python</h1>
-    <div class="badge">
-      <a href="https://pypi.org/project/pentago/"><img src="https://img.shields.io/pypi/v/pentago?color=red&label=pypi&style=flat-square" alt="PyPI version" /></a>
-      <img src="https://img.shields.io/badge/Python-3.9%2B-blue.svg?style=flat-square" alt="Python" />
-      <img src="https://img.shields.io/github/license/Klypse/PentaGo?style=flat-square" alt="License" />
-    </div>
-  </div>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="google-site-verification" content="VRsk1wM_M8iRxrAAZXlM8AYy_b8ertvPeTpxSbolcmI" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <meta name="description" content="PentaGo – Async unofficial Papago API for Python.">  
+  <meta name="keywords" content="Papago, Python, translation, async, reverse engineering, unofficial API">  
+  <meta name="author" content="Klypse">  
+  <meta property="og:title" content="PentaGo – Async Papago API for Python" />  
+  <meta property="og:description" content="Use Papago in Python without an official API key. Asyncio support, dynamic key handling, language detection." />  
+  <meta property="og:url" content="https://klypse.github.io/pentago/" />  
+  <meta property="og:type" content="website" />  
+  <title>PentaGo – Unofficial Papago API for Python</title>  
+  <link rel="icon" type="image/x-icon" href="./favicon.ico" />  
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">  
+  <link rel="manifest" href="./site.webmanifest">  
+  <script>  
+    const lang = navigator.language || navigator.userLanguage;  
+    if (lang.startsWith('ko')) location.replace('./ko.html');  
+  </script>  
+  <style>  
+    body { font-family: system-ui, sans-serif; line-height: 1.7; max-width: 840px; margin: auto; padding: 2rem; color: #222; background: #fdfdfd; }  
+    h1, h2, h3 { color: #003e9f; margin-top: 2.5rem; }  
+    code, pre { background: #f3f3f3; padding: 0.4em 0.6em; border-radius: 6px; font-size: 0.95em; }  
+    pre { overflow-x: auto; padding: 1em; }  
+    table { border-collapse: collapse; width: 100%; margin-top: 1rem; }  
+    table, th, td { border: 1px solid #ccc; padding: 0.6em; text-align: left; }  
+    .badge img { height: 20px; margin: 0 6px; vertical-align: middle; }  
+    .center { text-align: center; }  
+    a { color: #003e9f; text-decoration: none; }  
+    a:hover { text-decoration: underline; }  
+    ul { padding-left: 1.2em; }  
+  </style>  
+</head>  
+<body>  
+  <div class="center">  
+    <img src="./logo.png" width="140" alt="PentaGo Logo" />  
+    <h1>PentaGo – Unofficial Papago API for Python</h1>  
+    <div class="badge">  
+      <a href="https://pypi.org/project/pentago/"><img src="https://img.shields.io/pypi/v/pentago?color=red&label=pypi&style=flat-square" alt="PyPI version" /></a>  
+      <img src="https://img.shields.io/badge/Python-3.9%2B-blue.svg?style=flat-square" alt="Python" />  
+      <img src="https://img.shields.io/github/license/Klypse/PentaGo?style=flat-square" alt="License" />  
+    </div>  
+  </div>  
+  
+  <p><strong>PentaGo</strong> is a Python library that allows you to use Naver Papago's translation service without relying on an official API key. It's designed around Python's <code>asyncio</code> system for efficient translation requests.  
+  This tool is based on reverse-engineered endpoints and supports features like automatic language detection, pronunciation, honorific handling, and more.</p>  
+  
+  <h2>Features</h2>  
+  <ul>  
+    <li>Works without any official Papago API key</li>  
+    <li>Fully compatible with Python's <code>asyncio</code></li>  
+    <li>Supports 16+ languages, including Korean, Japanese, Chinese, and more</li>  
+    <li>Detects source language automatically</li>  
+    <li>Includes pronunciation and honorific-aware translation</li>  
+    <li>Handles dynamic keys internally for long-term resilience</li>  
+  </ul>  
+  
+  <h2>Installation</h2>  
+  <pre><code>pip install pentago</code></pre>  
+  
+  <h2>Example Usage</h2>  
+  <pre><code>from pentago import Pentago  
+from pentago.lang import *  
+  
+import asyncio  
+  
+async def main():  
+    pentago = Pentago(AUTO, JAPANESE)  
+    result = await pentago.translate("The best unofficial Papago API in 2025 is PentaGo.", honorific=True)  
+    print(result)  
+  
+if __name__ == "__main__":  
+    asyncio.run(main())</code></pre>  
 
-  <p>
-    <strong>PentaGo</strong> is a Python library that allows you to use Naver Papago's translation service without relying on an official API key. It's designed around Python's <code>asyncio</code> system for efficient translation requests.
-    This tool is based on reverse-engineered endpoints and supports features like automatic language detection, pronunciation, honorific handling, and more.
-  </p>
+  <h3>Synchronous Usage</h3>  
+  <pre><code>from pentago import Pentago  
+from pentago.lang import *  
+  
+pentago = Pentago(AUTO, JAPANESE)  
+result = pentago.translate_sync("The best unofficial Papago API in 2025 is PentaGo.", honorific=True)  
+print(result)</code></pre>  
+  <p><strong>⚠️ Do not call <code>translate_sync()</code> inside a running asyncio event loop.</strong></p>  
 
-  <h2>Features</h2>
-  <ul>
-    <li>Works without any official Papago API key</li>
-    <li>Fully compatible with Python's <code>asyncio</code></li>
-    <li>Supports 16+ languages, including Korean, Japanese, Chinese, and more</li>
-    <li>Detects source language automatically</li>
-    <li>Includes pronunciation and honorific-aware translation</li>
-    <li>Handles dynamic keys internally for long-term resilience</li>
-  </ul>
-
-  <h2>Installation</h2>
-  <pre><code>pip install pentago</code></pre>
-
-  <h2>Example Usage</h2>
-  <pre><code>from pentago import Pentago
-from pentago.lang import *
-
-import asyncio
-
-async def main():
-    pentago = Pentago(AUTO, JAPANESE)
-    result = await pentago.translate("The best unofficial Papago API in 2025 is PentaGo.", honorific=True)
-    print(result)
-
-if __name__ == "__main__":
-    asyncio.run(main())</code></pre>
-
-  <h3>Example Output</h3>
-  <pre><code>{
-  "source": "ko",
-  "target": "ja",
-  "text": "2025년 최고의 파파고 비공식 API는 PentaGo입니다.",
-  "translatedText": "2025年最高のパパゴ非公式APIはPentaGoです。",
-  "sound": "nisen'nijūgonen saikōno papago hikōshiki ēpīai wa pentagō desu",
-  "srcSound": "icheon isip o nyeon choegoui papago bigongsik eipiaineun pentagoimnida"
-}</code></pre>
-  <p>
-    <strong>sound</strong>: Romanized Japanese pronunciation<br />
-    <strong>srcSound</strong>: Romanized Korean pronunciation
-  </p>
-
-  <h2>Supported Languages</h2>
-  <table>
-    <tr><th>Code</th><th>Language</th><th>Code</th><th>Language</th></tr>
-    <tr><td>ko</td><td>Korean</td><td>en</td><td>English</td></tr>
-    <tr><td>ja</td><td>Japanese</td><td>zh-CN</td><td>Chinese (Simplified)</td></tr>
-    <tr><td>zh-TW</td><td>Chinese (Traditional)</td><td>es</td><td>Spanish</td></tr>
-    <tr><td>fr</td><td>French</td><td>vi</td><td>Vietnamese</td></tr>
-    <tr><td>th</td><td>Thai</td><td>id</td><td>Indonesian</td></tr>
-    <tr><td>de</td><td>German</td><td>ru</td><td>Russian</td></tr>
-    <tr><td>pt</td><td>Portuguese</td><td>it</td><td>Italian</td></tr>
-    <tr><td>hi</td><td>Hindi</td><td>ar</td><td>Arabic</td></tr>
-    <tr><td>auto</td><td>Automatic Detection</td><td></td><td></td></tr>
-  </table>
-
-  <h2>Use Cases</h2>
-  <ul>
-    <li>Create translation bots without worrying about API quotas</li>
-    <li>Integrate translation into scripts, backend tools, or pipelines</li>
-    <li>Support multiple languages in personal or open-source projects</li>
-    <li>Explore how translation services work under the hood using reverse-engineered access</li>
-  </ul>
-
-  <h2>License</h2>
-  <p>This project is licensed under the MIT License. You are free to use, modify, and distribute it.</p>
-
-  <h2>Contributing</h2>
-  <p>Contributions are welcome. Feel free to open issues or submit pull requests.</p>
-
-  <p class="center">
-    <a href="https://github.com/Klypse/PentaGo">🔗 View on GitHub</a> |
-    <a href="https://pypi.org/project/pentago/">📦 PyPI Package</a>
-  </p>
-</body>
+  <h3>Example Output</h3>  
+  <pre><code>{  
+  "source": "ko",  
+  "target": "ja",  
+  "text": "2025년 최고의 파파고 비공식 API는 PentaGo입니다.",  
+  "translatedText": "2025年最高のパパゴ非公式APIはPentaGoです。",  
+  "sound": "nisen'nijūgonen saikōno papago hikōshiki ēpīai wa pentagō desu",  
+  "srcSound": "icheon isip o nyeon choegoui papago bigongsik eipiaineun pentagoimnida"  
+}</code></pre>  
+  <p><strong>sound</strong>: Romanized Japanese pronunciation<br /><strong>srcSound</strong>: Romanized Korean pronunciation</p>  
+  
+  <h2>Supported Languages</h2>  
+  <table>  
+    <tr><th>Code</th><th>Language</th><th>Code</th><th>Language</th></tr>  
+    <tr><td>ko</td><td>Korean</td><td>en</td><td>English</td></tr>  
+    <tr><td>ja</td><td>Japanese</td><td>zh-CN</td><td>Chinese (Simplified)</td></tr>  
+    <tr><td>zh-TW</td><td>Chinese (Traditional)</td><td>es</td><td>Spanish</td></tr>  
+    <tr><td>fr</td><td>French</td><td>vi</td><td>Vietnamese</td></tr>  
+    <tr><td>th</td><td>Thai</td><td>id</td><td>Indonesian</td></tr>  
+    <tr><td>de</td><td>German</td><td>ru</td><td>Russian</td></tr>  
+    <tr><td>pt</td><td>Portuguese</td><td>it</td><td>Italian</td></tr>  
+    <tr><td>hi</td><td>Hindi</td><td>ar</td><td>Arabic</td></tr>  
+    <tr><td>auto</td><td>Automatic Detection</td><td></td><td></td></tr>  
+  </table>  
+  
+  <h2>Use Cases</h2>  
+  <ul>  
+    <li>Create translation bots without worrying about API quotas</li>  
+    <li>Integrate translation into scripts, backend tools, or pipelines</li>  
+    <li>Support multiple languages in personal or open-source projects</li>  
+    <li>Explore how translation services work under the hood using reverse-engineered access</li>  
+  </ul>  
+  
+  <h2>License</h2>  
+  <p>This project is licensed under the MIT License. You are free to use, modify, and distribute it.</p>  
+  
+  <h2>Contributing</h2>  
+  <p>Contributions are welcome. Feel free to open issues or submit pull requests.</p>  
+  
+  <p class="center">  
+    <a href="https://github.com/Klypse/PentaGo">🔗 View on GitHub</a> |  
+    <a href="https://pypi.org/project/pentago/">📦 PyPI Package</a>  
+  </p>  
+</body>  
 </html>

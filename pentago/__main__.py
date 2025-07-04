@@ -2,6 +2,7 @@
 from typing import Dict, Optional
 import json
 import httpx
+import asyncio
 
 from pentago.api import *
 from pentago.client import *
@@ -68,7 +69,8 @@ class Pentago:
         status = Response(res.status_code)
         if status.response:
             content = res.json()
-            if verbose: return json.dumps(content, indent=4)
+            if verbose:
+                return json.dumps(content, indent=4)
             sound: str = None
             srcSound: str = None
             if 'tlit' in content:
@@ -83,3 +85,12 @@ class Pentago:
                 'sound': sound,
                 'srcSound': srcSound
             }
+
+    def translate_sync(self, text: str, honorific: bool = False, verbose: bool = False) -> Dict[str, str]:
+        """Synchronous wrapper for `translate()` – only safe in non‑async environments."""
+        try:
+            loop = asyncio.get_running_loop()
+            raise RuntimeError("Cannot call `translate_sync()` inside an async environment.")
+        except RuntimeError:
+            # No running loop – safe to run
+            return asyncio.run(self.translate(text, honorific=honorific, verbose=verbose))

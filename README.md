@@ -82,6 +82,23 @@ if __name__ == "__main__":
 
 ---
 
+### 🧱 Synchronous Usage
+
+If you're working in a purely synchronous environment, you can call `.translate_sync()` instead:
+
+```python
+from pentago import Pentago
+from pentago.lang import *
+
+pentago = Pentago(AUTO, JAPANESE)
+result = pentago.translate_sync("The best unofficial Papago API in 2025 is PentaGo.", honorific=True)
+print(result)
+```
+
+> ⚠️ Do not call `.translate_sync()` inside an already-running `asyncio` event loop.
+
+---
+
 ## 🌐 Supported Languages
 
 | Code    | Language              | Code    | Language             |
